@@ -141,7 +141,7 @@ jobs:
         delete_dns_records(subdomain)
 
         # 定义文件URL和保存路径
-        url = "https://raw.githubusercontent.com/xj888xj/cfip/main/CloudflareST/yxip.txt"
+        url = "https://raw.githubusercontent.com/xj888xj/CFCDN-AutoYX/main/yx_ips.txt"
         save_path = "cfip.csv"
 
         # 下载IP地址列表
