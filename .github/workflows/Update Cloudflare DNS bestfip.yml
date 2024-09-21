@@ -142,7 +142,7 @@ jobs:
 
         # 定义文件URL和保存路径
         url = "https://raw.githubusercontent.com/ymyuuu/IPDB/main/bestcf.txt"
-        save_path = "bestcf.txt"
+        save_path = "bestcf.csv"
 
         # 下载IP地址列表
         download_ip_list(url, save_path)
