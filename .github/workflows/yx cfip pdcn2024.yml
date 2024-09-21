@@ -30,7 +30,6 @@ jobs:
         CF_DOMAIN_NAME: ${{ secrets.CLOUDFLARE_SUBDOMAIN }}
         CF_API_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
       run: |
-        import os
         import requests
         from bs4 import BeautifulSoup
         import re
