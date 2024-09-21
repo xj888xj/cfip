@@ -142,7 +142,7 @@ jobs:
 
         # 定义文件URL和保存路径
         url = "https://raw.githubusercontent.com/xj888xj/cfip/main/CloudflareST/yxip.txt"
-        save_path = "cfip.txt"
+        save_path = "cfip.csv"
 
         # 下载IP地址列表
         download_ip_list(url, save_path)
