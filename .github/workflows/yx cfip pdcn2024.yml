@@ -25,10 +25,10 @@ jobs:
 
     - name: Run the yx_ips script
       env:
-        #CF_API_KEY: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        #CF_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
-        #CF_DOMAIN_NAME: ${{ secrets.CLOUDFLARE_SUBDOMAIN }}
-        #CF_API_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
+        CF_API_KEY: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CF_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        CF_DOMAIN_NAME: ${{ secrets.CLOUDFLARE_SUBDOMAIN }}
+        CF_API_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
       run: |  
         python << EOF      
         import os
