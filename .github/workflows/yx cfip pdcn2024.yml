@@ -205,10 +205,9 @@ GITHUB_ACTIONS_YAML = """
 name: Run DNS Manager
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  workflow_dispatch:  # 手动触发
+  schedule:
+    - cron: '0 */6 * * *'  # 每6小时运行一次，可以根据需求调整
 
 jobs:
   run-dns-manager:
