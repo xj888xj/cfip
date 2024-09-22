@@ -220,8 +220,7 @@ jobs:
             else:
                 print(f"Failed to create DNS record for IP: {ip}, status code: {response.status_code}, response: {response.text}")
 
-        if __name__ == "__main__":
-            main()
+
 
     - name: Commit and push changes
       run: |
