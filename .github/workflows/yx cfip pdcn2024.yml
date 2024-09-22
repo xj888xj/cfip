@@ -34,7 +34,6 @@ jobs:
         import requests
         from bs4 import BeautifulSoup
         import re
-        from PIL import Image
 
         # Cloudflare API配置信息
         CF_API_KEY = os.getenv('CF_API_KEY')
@@ -223,3 +222,11 @@ jobs:
 
         if __name__ == "__main__":
             main()
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add yx_ips.txt
+        git commit -m "Update yx_ips.txt" || echo "No changes to commit"
+        git push origin main
