@@ -34,6 +34,7 @@ jobs:
         import requests
         from bs4 import BeautifulSoup
         import re
+        from PIL import Image
 
         # Cloudflare API配置信息
         CF_API_KEY = os.getenv('CF_API_KEY')
