@@ -50,7 +50,6 @@ jobs:
         # 定义五个网址
         urls = [
             "https://cf.090227.xyz/",
-            "https://stock.hostmonit.com/CloudFlareYes",
             "https://ip.164746.xyz/",
             "https://monitor.gacjie.cn/page/cloudflare/ipv4.html",
             "https://www.182682.xyz/page/cloudflare/ipv4.html"
@@ -81,20 +80,6 @@ jobs:
             data = []
             if "cf.090227.xyz" in url:
                 rows = soup.find_all('tr')
-                for row in rows:
-                    columns = row.find_all('td')
-                    if len(columns) >= 3:
-                        line_name = columns[0].text.strip()
-                        ip_address = columns[1].text.strip()
-                        latency_text = columns[2].text.strip()
-                        latency_match = latency_pattern.match(latency_text)
-                        if latency_match:
-                            latency_value = latency_match.group(1)
-                            latency_unit = 'ms'
-                            data.append(f"{ip_address}#{line_name}-{latency_value}{latency_unit}")
-
-            elif "stock.hostmonit.com" in url:
-                rows = soup.find_all('tr', class_=re.compile(r'el-table__row'))
                 for row in rows:
                     columns = row.find_all('td')
                     if len(columns) >= 3:
