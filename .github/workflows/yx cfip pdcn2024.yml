@@ -105,7 +105,7 @@ jobs:
                             latency_unit = 'ms'
                             data.append(f"{ip_address}-{latency_value}{latency_unit}")
 
-            elif "monitor.gacjie.cn" in url:
+            elif "www.wetest.vip" in url:
                 rows = soup.find_all('tr')
                 for row in rows:
                     tds = row.find_all('td')
